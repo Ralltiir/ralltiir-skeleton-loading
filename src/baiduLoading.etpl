@@ -1,0 +1,83 @@
+<div class="sk-loading-${id}">
+    <style>
+        body {
+            <% if: ${bodyBackground} !== undefined %> background-color: ${bodyBackground}; <%/if%>
+        }
+        .sfa-view {
+            <% if: ${bgStyle} !== undefined %> background-color: ${bgStyle} !important; <%/if%>
+        }
+        .sk-loading-${id} {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            width: 161px;
+            height: 49px;
+            line-height: 49px;
+            margin-top: -24px;
+            margin-left: -80px;
+            border-radius: 1px;
+            text-align: center;
+        }
+        <%var: top = ${offsetY} * -1 / 2 %>
+        .sk-loading-${id} .sk-loading-icon-tab {
+            margin-top: ${top}px !important;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .sk-loading-${id} .sk-loading-tab-bglogo {
+            display: inline-block;
+            background: url(//m.baidu.com/se/static/img/iphone/tab_loading__bg_logo_small.png) no-repeat;
+            background-size: 147px 48px;
+            height: 48px;
+            width: 147px;
+        }
+
+        .sk-loading-${id} .sk-loading-tab-toplight {
+            display: inline-block;
+            position: relative;
+            height: 60px;
+            width: 12px;
+            top: -60px;
+            left: -78px;
+            background-color: rgba(255, 255, 255, .5);
+            -webkit-transform: skew(20deg);
+                    transform: skew(20deg);
+            -webkit-animation: 1s lodingframe infinite;
+                    animation: 1s lodingframe infinite;
+        }
+        .sk-loading-${id} span {
+            display: inline-block;
+            color: #6b6b6b;
+            font-size: 18px;
+            padding-right: 3px;
+            vertical-align: middle;
+        }
+        @keyframes lodingframe {
+            0% {
+                left: -78px;
+            }
+            100% {
+                left: 73px;
+            }
+        }
+        /* 兼容性 */
+        @-webkit-keyframes lodingframe {
+            0% {
+                left: -78px;
+            }
+            100% {
+                left: 73px;
+            }
+        }
+    </style>
+    <div class="sk-loading-icon-tab">
+        <span class="sk-loading-tab-bglogo"></span>
+        <% if: ${toplight} !== false%>
+            <span class="sk-loading-tab-toplight"></span>
+        <%/if%>
+    </div>
+</div>

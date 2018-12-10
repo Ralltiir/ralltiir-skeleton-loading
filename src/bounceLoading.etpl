@@ -1,0 +1,70 @@
+<div class="sk-loading-${id}">
+    <style>
+        body {
+            <% if: ${bodyBackground} !== undefined %> background-color: ${bodyBackground}; <%/if%>
+        }
+        .sfa-view {
+            <% if: ${bgStyle} !== undefined %> background-color: ${bgStyle} !important; <%/if%>
+        }
+        <%var: top = ${offsetY} * -1 / 2 - 24 %>
+        .sk-loading-${id} {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            width: 161px;
+            height: 49px;
+            line-height: 49px;
+            margin-top: ${top}px;
+            margin-left: -80px;
+            border-radius: 1px;
+            text-align: center;
+        }
+        .sk-loading-${id} .sk-loading-spinner {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .sk-loading-double-bounce1, .sk-loading-double-bounce2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #0071ff;
+            opacity: .2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-animation: loading-bounce 2s infinite ease-in-out;
+            animation: loading-bounce 2s infinite ease-in-out;
+        }
+        .sk-loading-double-bounce2 {
+            -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+        }
+        @-webkit-keyframes loading-bounce {
+            0%,
+            100% {
+                -webkit-transform: scale(0.0);
+            }
+            50% {
+                -webkit-transform: scale(1.0);
+            }
+        };
+        @keyframes loading-bounce {
+            0%,
+            100% {
+                -webkit-transform: scale(0.0);
+                        transform: scale(0.0);
+            }
+            50% {
+                -webkit-transform: scale(1.0);
+                        transform: scale(1.0);
+            }
+        };
+    </style>
+    <div class="sk-loading-spinner">
+        <div class="sk-loading-double-bounce1"></div>
+        <div class="sk-loading-double-bounce2"></div>
+    </div>
+</div>

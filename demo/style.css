@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background: #EEE;
+}
+.rt-app {
+  position: fixed;
+  width: 100%;
+}
+.rt-head {
+  height: 40px;
+  border-bottom: 1px solid #EEE;
+  color: #999;
+  line-height: 40px;
+  text-align: center;
+  background: #FFF;
+}
+.rt-body {
+  position: relative;
+}
