@@ -7,7 +7,7 @@ const del = require("del");
 const inline = require("gulp-inline-template");
 
 gulp.task("build:inline", function () {
-  return tsProject.src()
+  return gulp.src(["src/**/*.ts"])
     .pipe(inline())
     .pipe(tsProject())
     .pipe(gulp.dest("dist"));
