@@ -6,10 +6,22 @@ var debug = localStorage.debug;
 require.config({
   baseUrl: debug ? 'amd_modules' : '//unpkg.zhimg.com',
     paths: {
-        "etpl": 'http://localhost:8077/etpl.source'
+        "etpl": '//unpkg.zhimg.com/etpl'
     },
     waitSeconds: 30
 });
+
+// apmjs auto-creates these entries when installed locally
+define('etpl', function (require) {
+  return require('etpl/src/main');
+});
+define('ralltiir-skeleton', function (require) {
+  return require('ralltiir-skeleton/dist/index');
+});
+define('ralltiir-skeleton-loading', function (require) {
+  return require('ralltiir-skeleton-loading/dist/index');
+});
+
 
 require(
     ['etpl', 'ralltiir-skeleton', 'ralltiir-skeleton-loading'],
