@@ -5,13 +5,14 @@ import { __inline } from "../global";
 export class BaiduLoading implements SkeletonAppearance {
   private container: HTMLElement;
   private tpl = __inline("./baiduLoading.etpl");
+  private id = new Date().getTime().toString(32);
   constructor(private options: BaiduLoadingOptions) {}
   public render(options: SkeletonAppearanceOptions) {
     this.container = options.target;
     this.container.innerHTML += this.options.Etpl.compile(this.tpl)({
-      id: new Date().getTime().toString(32),
+      id: this.id,
       // 百度loading 视觉上有些偏下 调整 30px的偏移
-      offsetY: (options.offsetY || 0) + 30,
+      offsetY: (options.offsetY || 0) + (this.options.offsetY || 30),
       toplight: this.options.toplight,
     });
     return this.container;
@@ -24,4 +25,5 @@ export class BaiduLoading implements SkeletonAppearance {
 interface BaiduLoadingOptions {
   Etpl: any;
   toplight?: boolean;
+  offsetY?: number;
 }

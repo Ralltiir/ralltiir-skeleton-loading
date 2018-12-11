@@ -17,6 +17,6 @@
   "license": "MIT",
   "author": "qiansc",
   "amdDependencies": {
-    "ralltiir-skeleton": "^0.0.2"
+    "ralltiir-skeleton": "^0.0.5"
   }
 }

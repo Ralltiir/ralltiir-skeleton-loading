@@ -5,11 +5,12 @@ import { __inline } from "../global";
 export class BounceLoading implements SkeletonAppearance {
   private container: HTMLElement;
   private tpl = __inline("./bounceLoading.etpl");
+  private id = new Date().getTime().toString(32);
   constructor(private options: BounceLoadingOptions) {}
   public render(options: SkeletonAppearanceOptions) {
     options.target.innerHTML += this.options.Etpl.compile(this.tpl)({
-      id: new Date().getTime().toString(32),
-      offsetY: options.offsetY || 0,
+      id: this.id,
+      offsetY: (options.offsetY || 0) + (this.options.offsetY || 30),
     });
     this.container = options.target;
     return options.target;
@@ -21,4 +22,5 @@ export class BounceLoading implements SkeletonAppearance {
 
 interface BounceLoadingOptions {
   Etpl: any;
+  offsetY?: number;
 }

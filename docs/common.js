@@ -22,30 +22,31 @@ require(
         background: "#FFF"
         ,fadeOut: true
         ,isOffset: true
+        //,isFixed: true
     });
     skeleton.create();
     setTimeout(function() {
         console.log('pause');
         skeleton.pause();
     }, 1000);
-    setTimeout(function() {
-        console.log('destroy');
-        skeleton.destroy();
-    }, 3000);
+    // setTimeout(function() {
+    //     console.log('destroy');
+    //     skeleton.destroy();
+    // }, 3000);
     setTimeout(function() {
         console.log('resume');
         skeleton.resume();
     }, 5000);
-    setTimeout(function() {
-        const skeleton2 = new Skeleton.Skeleton(container, new Loading.BounceLoading({
-            Etpl: Etpl,
-            toplight: true
-        }), {
-            background: "#FFF"
-            ,fadeOut: true
-            ,isOffset: true
-        });
-        console.log("new");
-        skeleton2.create();
-    }, 7000);
+    // setTimeout(function() {
+    //     const skeleton2 = new Skeleton.Skeleton(container, new Loading.BounceLoading({
+    //         Etpl: Etpl,
+    //         toplight: true
+    //     }), {
+    //         background: "#FFF"
+    //         ,fadeOut: true
+    //         ,isOffset: true
+    //     });
+    //     console.log("new");
+    //     skeleton2.create();
+    // }, 7000);
 });
