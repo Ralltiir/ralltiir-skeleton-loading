@@ -6,7 +6,30 @@
 [![npm downloads](http://img.shields.io/npm/dm/ralltiir-skeleton-loading.svg)](https://www.npmjs.org/package/ralltiir-skeleton-loading)
 
 # What's ralltiir-skeleton-loading
-Ralltiir/ralltiir-skeleton-loading
+ralltiir-skeleton-loading提供了ralltiir-skeleton所需的Loading类外观库，目前有Brand Logo及呼吸灯两种外观。
 
-# Demo
-[Ralltiir-Skeleton-Loading](https://ralltiir.github.io/ralltiir-skeleton-loading/)
+## Demo
+[ralltiir-skeleton-loading](https://ralltiir.github.io/ralltiir-skeleton-loading/demo/)
+
+## Module
+
+[API](https://ralltiir.github.io/ralltiir-skeleton-loading/)
+
+Example
+
+```
+
+var appearance = new BaiduLoading({Etpl: Etpl,toplight: true});
+
+var skeleton = new Skeleton.Skeleton(container, appearances[index], {
+  background: "#FFF"
+  ,fadeOut: true
+  ,fadeOutDuration: 400
+  ,isOffset: true
+  //,isFixed: true
+});
+
+skeleton.create();
+skeleton.destroy();
+
+```

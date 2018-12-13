@@ -2,6 +2,9 @@
 import { SkeletonAppearance, SkeletonAppearanceOptions } from "ralltiir-skeleton";
 import { __inline } from "../global";
 
+/**
+ * 使用Baidu Brand的Loading SkeletonAppearance
+ */
 export class BaiduLoading implements SkeletonAppearance {
   private container: HTMLElement;
   private tpl = __inline("./baiduLoading.etpl");
@@ -23,7 +26,10 @@ export class BaiduLoading implements SkeletonAppearance {
 }
 
 interface BaiduLoadingOptions {
+  /** Etpl模板引擎 */
   Etpl: any;
+  /** Loading高光开启 */
   toplight?: boolean;
+  /** Loading居中偏移 */
   offsetY?: number;
 }

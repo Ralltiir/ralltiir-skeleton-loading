@@ -2,6 +2,9 @@
 import { SkeletonAppearance, SkeletonAppearanceOptions } from "ralltiir-skeleton";
 import { __inline } from "../global";
 
+/**
+ * 使用呼吸灯的的Loading SkeletonAppearance
+ */
 export class BounceLoading implements SkeletonAppearance {
   private container: HTMLElement;
   private tpl = __inline("./bounceLoading.etpl");
@@ -21,6 +24,8 @@ export class BounceLoading implements SkeletonAppearance {
 }
 
 interface BounceLoadingOptions {
+  /** Etpl模板引擎 */
   Etpl: any;
+  /** Loading居中偏移 */
   offsetY?: number;
 }
