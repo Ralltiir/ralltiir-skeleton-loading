@@ -19,7 +19,9 @@ export class BounceLoading implements SkeletonAppearance {
     return options.target;
   }
   public destroy() {
-    this.container.innerHTML = "";
+    if (this.container) {
+      this.container.innerHTML = "";
+    }
   }
 }
 

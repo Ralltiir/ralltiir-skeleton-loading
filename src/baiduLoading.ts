@@ -21,7 +21,9 @@ export class BaiduLoading implements SkeletonAppearance {
     return this.container;
   }
   public destroy() {
-    this.container.innerHTML = "";
+    if (this.container) {
+      this.container.innerHTML = "";
+    }
   }
 }
 
