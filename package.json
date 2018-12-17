@@ -1,6 +1,6 @@
 {
   "name": "ralltiir-skeleton-loading",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "discription": "Ralltiir Loading Skeleton",
   "scripts": {
     "preversion": "gulp && npm run lint && npm run cover",
