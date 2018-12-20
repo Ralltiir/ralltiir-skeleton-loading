@@ -1,4 +1,4 @@
-# Ralltiir Skeleton
+# Ralltiir Skeleton Loading
 ![Language](https://img.shields.io/badge/-TypeScript-blue.svg)
 [![Build Status](https://travis-ci.org/Ralltiir/ralltiir-skeleton-loading.svg?branch=master)](https://travis-ci.org/Ralltiir/ralltiir-skeleton-loading)
 [![Coveralls](https://img.shields.io/coveralls/Ralltiir/ralltiir-skeleton-loading.svg)](https://coveralls.io/github/Ralltiir/ralltiir-skeleton-loading)
@@ -21,7 +21,7 @@ Example
 
 var appearance = new BaiduLoading({Etpl: Etpl,toplight: true});
 
-var skeleton = new Skeleton.Skeleton(container, appearances[index], {
+var skeleton = new Skeleton.Skeleton(container, appearance, {
   background: "#FFF"
   ,fadeOut: true
   ,fadeOutDuration: 400
